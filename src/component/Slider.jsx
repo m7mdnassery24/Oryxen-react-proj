@@ -29,6 +29,7 @@ function SimpleSlider() {
     };
     const content = {
     }
+
     return (
         <>
             <br/>
