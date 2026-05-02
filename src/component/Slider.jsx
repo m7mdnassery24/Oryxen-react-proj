@@ -15,7 +15,7 @@ function SimpleSlider() {
     };
     const stylediv = {
         minHeight: "280px",
-        height:"500px",
+        height:"530px",
         display: "flex",
         alignItems: "center",
         backgroundColor: "rgb(134, 144, 224)",
