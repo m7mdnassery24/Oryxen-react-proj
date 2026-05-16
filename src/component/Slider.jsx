@@ -1,50 +1,55 @@
-import react from "react"
+import React, { memo, useState } from "react"; // Fixed capitalization, removed useNavigate
+import { useNavigate } from "react-router-dom";
 import Slider from "react-slick";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { Products } from "../data/Products";
+import  Products  from "../data/Products";
+
 function SimpleSlider() {
     const settings = {
         dots: true,
         infinite: true,
-        speed: 800,
+        speed: 900,
         slidesToShow: 1,
         slidesToScroll: 1
     };
     const stylediv = {
-        minHeight: "280px",
-        height:"530px",
+        minHeight: "290px",
+        height:"410px",
         display: "flex",
-        alignItems: "center",
         backgroundColor: "rgb(134, 144, 224)",
-        padding: "40px 0", 
         color: "white"
     };
 
     const fullwidth = {
         width: "75%", 
-        margin: "auto",
+      
     };
-    const content = {
+   
+    const location =()=>{
+        window.location("/shop")
     }
 
+   const navigate = useNavigate();
+    const handelmovment = ()=>{
+        navigate("/shop")
+    }
     return (
         <>
-            <br/>
-            <br/>
-            
+<br/>
+<br/>
             <div className=" container-fluid" style={stylediv} >
-                <div className="slider-container  cursoul container" style={fullwidth}>
+                <div className="slider-container  cursoul container " style={fullwidth}>
                     <Slider {...settings}>
-                        {Products.map((item) => (
-                            <div key={item.id} className="container">
-                                <div className="row align-items-center justify-content-center p-3 p-md-5">
+                        {Products.filter(item=>item.category === "slider").map((item) => (
+                            <div key={item.id} className="container mt-5">
+                                <div className="row   ">
 
 
-                                    <div className="col-12 col-md-7 text-center ">
-                                        <img
+                                    <div className="col-12 col-md-7 text-center mt-4 ">
+                                        <img 
                                             src={item.img}
                                             alt={item.title}
                                             className="img-fluid"
@@ -56,17 +61,17 @@ function SimpleSlider() {
                                             }}
                                         />
                                     </div>
+<br />
 
-
-                                    <div className="col-12 col-md-5 text-center text-md-start ">
-                                        <h1 className="display-5 fw-bold text-white mb-3">
+                                    <div className="col-12 col-md-5 text-center text-md-start  " >
+                                        <h1 className="display-5 fw-bold text-white  ">
                                             {item.title}
                                         </h1>
-                                        <p className="h4 text-white-50 mb-4">
+                                        <p className="h4 text-white-50 ">
                                             {item.price} <small>EGP</small>
                                         </p>
-                                        <button className="btn btn-light btn-lg px-5 fw-bold shadow-sm">
-                                            Buy Now
+                                        <button className="btn btn-light btn-lg  fw-bold shadow-sm " onClick={handelmovment}>
+                                            View Collection
                                         </button>
                                     </div>
 
@@ -82,4 +87,4 @@ function SimpleSlider() {
 
 
 
-export default SimpleSlider;
+export default memo(SimpleSlider);
