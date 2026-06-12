@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Oryxen_react-proj/static/css/main.4a763a79.css",
-    "main.js": "/Oryxen_react-proj/static/js/main.1cc2dc75.js",
+    "main.js": "/Oryxen_react-proj/static/js/main.c298c4d8.js",
     "static/js/453.a898a179.chunk.js": "/Oryxen_react-proj/static/js/453.a898a179.chunk.js",
     "static/media/xaomi.jpg": "/Oryxen_react-proj/static/media/xaomi.2e49225ee498cc1111d6.jpg",
     "static/media/chan.png": "/Oryxen_react-proj/static/media/chan.78aeb36a78fb4fb95de4.png",
@@ -35,11 +35,11 @@
     "static/media/slick.woff": "/Oryxen_react-proj/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/Oryxen_react-proj/index.html",
     "main.4a763a79.css.map": "/Oryxen_react-proj/static/css/main.4a763a79.css.map",
-    "main.1cc2dc75.js.map": "/Oryxen_react-proj/static/js/main.1cc2dc75.js.map",
+    "main.c298c4d8.js.map": "/Oryxen_react-proj/static/js/main.c298c4d8.js.map",
     "453.a898a179.chunk.js.map": "/Oryxen_react-proj/static/js/453.a898a179.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4a763a79.css",
-    "static/js/main.1cc2dc75.js"
+    "static/js/main.c298c4d8.js"
   ]
 }
